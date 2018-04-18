@@ -1,11 +1,11 @@
-# JavaCommons-gradle
-[TMP] this repository represents the larger rewrite of the library in gradle - this will one day replace picoded.JavaCommons
+# Picoded.JavaCommons-gradle
+[TMP] Note that this repository represents the larger rewrite of the library in gradle - that WILL replace picoded.JavaCommons.
+
+Everything from here onwards will refer to it as such =)
 
 ---
 
 # Picoded.JavaCommons
-
-![Optimize Everything! - JavaCommons in a nutshell](./docs/images/xkcd_the_general_problem.png)
 
 JavaCommons is a not a thin specific use case library. 
 
@@ -13,7 +13,11 @@ Its an extremly fat server-side general purpose library, with more then a 160+ d
 
 All before even including any of its own code.
 
-As this contains pretty much ALMOST EVERYTHING we used in one way or another, for a project somewhere, (and still growing). Our new servlet project setup, is normally just use this, and start coding.
+![Optimize Everything! - JavaCommons in a nutshell](./docs/images/xkcd_the_general_problem.png)
+
+The image accurately depicts how the project started. As this contains pretty much ALMOST EVERYTHING we used in one way or another, for a project somewhere (and still growing). 
+
+Our new servlet project setup, is normally clone this, use a template, and start coding.
 
 ## Summary of benefits
 
@@ -59,32 +63,45 @@ With components going through one, or many iterations of meeting the following g
 
 ![Sandwich...](./docs/images/sandwich_on_toast.jpg)
 
-To make this who specification guide more digestable, it will be split into the following.
+JavaCommons is like a sandwich is made of multiple layers. Each represented by its own library package
 
-* [Core Structure and Data Conversion](core/the-core.md)
-* [Utilities of random stuff](util/the-random-stuff.md)
-* [Data Stack : SQL and NO-SQL](dstack/the-dstack.md)
-* Servlet and API Builder
-* Frontend vue.js
-* PDF Generator
+**JavaCommons-core**
 
-{% hint style='tip' %}
-If JavaCommons was a sandwich, the following would be the ingrediants
+The core bread foundation. Which mainly consist of classes for the following ...
 
-* Core - Bread
+* Data conversion
+* Data structures
+* Java map collections query & aggregation
+* Reusable enums
+* Static utility classes
+
+Just like bread, this library package forms the core foundation in which all other JavaCommon based packages are built on.
+Most notably would be the `GenericConvertMap`, in which nearly all map based data structure implements, to provide get convinence to any common primitives.
+
+**JavaCommons-dstack**
+
+The meat in the library
+
+Hmm... where was the salt again?
+
+With that.... lets get this rolling!
+
+PS: "pages" in this "book" prefixed with `[Concept]` refers to meta concepts that heavily influence / explaines certain design decisions. And is not an actual specification.
+
+
+
+
+
+
+
+
+
+
+-----
+
+other stuff (from old document : to expend on)
+
 * Util - Butter on the bread
-* Data Stack - Meaty ham
 * Servlet - Menu, Plate, Fork and Spoons
 * Frontend - Lecttuce and dressings
 * PDF Generator - condiment of Mayonnaise and tomato sauce
-
-Hmm... where was the salt again?
-{% endhint %}
-
-{% hint style='danger' %}
-**Breaking Namespace Changes:** in an effort to better segment the libraries, namespace changes may occur incrementally, to confrom to this specification. For example `picoded.struct` would be migrated to `picoded.core.struct`
-{% endhint %}
-
-Note that "pages" in this "book" prefixed with `[Concept]` refers to meta concepts that heavily influence / explaines certain design decisions. And is not an actual specification.
-
-With that.... lets get this rolling!
