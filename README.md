@@ -15,7 +15,7 @@ All before even including any of its own code.
 
 ![Optimize Everything! - JavaCommons in a nutshell](./docs/images/xkcd_the_general_problem.png)
 
-The image accurately depicts how the project started. As this contains pretty much ALMOST EVERYTHING we used in one way or another, for a project somewhere (and still growing). 
+The xkcd comic above accurately depicts how the project started. As this contains pretty much ALMOST EVERYTHING we used in one way or another, for a project somewhere (and still growing). 
 
 Our new servlet project setup, is normally clone this, use a template, and start coding.
 
@@ -80,7 +80,20 @@ Most notably would be the `GenericConvertMap`, in which nearly all map based dat
 
 **JavaCommons-dstack**
 
-The meat in the library
+The meat in the library, in which it focuses on being an abstraction layer between the application interacting with data, and the actual backend being used.
+
+It facilitates the concept of layering of the application data storage, across multiple providers. Such as the following ...
+
+* My / Oracle / MS SQL
+* Distributed cache
+* Object storage (Google Cloud Storage / AWS)
+
+All while maintaining the same interface for the application. Leaving the decision of the backend used, or the combination of backend's used a devops responsibility.
+
+Its most notable claass is `DataObjectMap` which functions as a queryable `NoSQL` interface. That functions even against an SQL backend.
+Followed by `DStack` which faciltates the stacking of data backend provider for devops. Such as a distributed cache with an SQL backend.
+
+---
 
 Hmm... where was the salt again?
 
@@ -88,20 +101,12 @@ With that.... lets get this rolling!
 
 PS: "pages" in this "book" prefixed with `[Concept]` refers to meta concepts that heavily influence / explaines certain design decisions. And is not an actual specification.
 
-
-
-
-
-
-
-
-
-
 -----
-
-other stuff (from old document : to expend on)
+~~~~
+other stuff (from old document : ignore as it serves as notes for now)
 
 * Util - Butter on the bread
 * Servlet - Menu, Plate, Fork and Spoons
 * Frontend - Lecttuce and dressings
 * PDF Generator - condiment of Mayonnaise and tomato sauce
+~~~~
