@@ -4,3 +4,6 @@
 [submodule "JavaCommons-dstack"]
 	path = JavaCommons-dstack
 	url = https://github.com/picoded/JavaCommons-dstack.git
+[submodule "JavaCommons-servlet"]
+	path = JavaCommons-servlet
+	url = https://github.com/picoded/JavaCommons-servlet.git
