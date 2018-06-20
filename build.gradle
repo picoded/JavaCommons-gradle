@@ -80,12 +80,14 @@ dependencies {
 	//-------------------------------------------------------------------------------------------------------------------
 	compile fileTree(dir: './JavaCommons-core/build/libs', include: ['*-nodep.jar']) 
 	compile fileTree(dir: './JavaCommons-dstack/build/libs', include: ['*-nodep.jar']) 
+	compile fileTree(dir: './JavaCommons-servlet/build/libs', include: ['*-nodep.jar']) 
 
 
 	// These dependencies are exported as part of the "all" package
 	//-------------------------------------------------------------------------------------------------------------------
 	api fileTree(dir: './JavaCommons-core/build/libs', include: ['*-all.jar']) 
 	api fileTree(dir: './JavaCommons-dstack/build/libs', include: ['*-all.jar']) 
+	api fileTree(dir: './JavaCommons-servlet/build/libs', include: ['*-all.jar']) 
 
 	// This dependencies is used internally, and not exposed to consumers on their own compile classpath.
 	//-------------------------------------------------------------------------------------------------------------------
