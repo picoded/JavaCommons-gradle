@@ -61,10 +61,17 @@ task buildJavaCommonsDStack(type: GradleBuild) {
 	tasks = ['build']
 }
 
+// JavaCommons core compilation
+task buildJavaCommonsServlet(type: GradleBuild) {
+	buildFile = './JavaCommons-servlet/build.gradle'
+	tasks = ['build']
+}
+
 // Dependency linkage of core project build
 compileJava {
 	dependsOn buildJavaCommonsCore
 	dependsOn buildJavaCommonsDStack
+	dependsOn buildJavaCommonsServlet
 }
 
 //----------------------------------------------------------------
