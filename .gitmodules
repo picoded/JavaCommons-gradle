@@ -7,3 +7,6 @@
 [submodule "JavaCommons-servlet"]
 	path = JavaCommons-servlet
 	url = https://github.com/picoded/JavaCommons-servlet.git
+[submodule "JavaCommons-module"]
+	path = JavaCommons-module
+	url = https://github.com/picoded/JavaCommons-module.git

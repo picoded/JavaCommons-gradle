@@ -138,6 +138,9 @@ jar {
 	from("./JavaCommons-dstack/build/classes/java/main") {
 		include "**/*"
 	}
+	from("./JavaCommons-servlet/build/classes/java/main") {
+		include "**/*"
+	}
 }
 
 //
