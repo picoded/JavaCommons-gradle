@@ -67,11 +67,18 @@ task buildJavaCommonsServlet(type: GradleBuild) {
 	tasks = ['test','jar','fatJar']
 }
 
+// JavaCommons core compilation
+task buildJavaCommonsModule(type: GradleBuild) {
+	buildFile = './JavaCommons-module/build.gradle'
+	tasks = ['test','jar','fatJar']
+}
+
 // Dependency linkage of core project build
 compileJava {
 	dependsOn buildJavaCommonsCore
 	dependsOn buildJavaCommonsDStack
 	dependsOn buildJavaCommonsServlet
+	dependsOn buildJavaCommonsModule
 }
 
 //----------------------------------------------------------------
@@ -88,13 +95,14 @@ dependencies {
 	compile fileTree(dir: './JavaCommons-core/build/libs', include: ['*-nodep.jar']) 
 	compile fileTree(dir: './JavaCommons-dstack/build/libs', include: ['*-nodep.jar']) 
 	compile fileTree(dir: './JavaCommons-servlet/build/libs', include: ['*-nodep.jar']) 
-
+	compile fileTree(dir: './JavaCommons-module/build/libs', include: ['*-nodep.jar']) 
 
 	// These dependencies are exported as part of the "all" package
 	//-------------------------------------------------------------------------------------------------------------------
 	api fileTree(dir: './JavaCommons-core/build/libs', include: ['*-all.jar']) 
 	api fileTree(dir: './JavaCommons-dstack/build/libs', include: ['*-all.jar']) 
 	api fileTree(dir: './JavaCommons-servlet/build/libs', include: ['*-all.jar']) 
+	api fileTree(dir: './JavaCommons-module/build/libs', include: ['*-all.jar']) 
 
 	// This dependencies is used internally, and not exposed to consumers on their own compile classpath.
 	//-------------------------------------------------------------------------------------------------------------------
@@ -139,6 +147,9 @@ jar {
 		include "**/*"
 	}
 	from("./JavaCommons-servlet/build/classes/java/main") {
+		include "**/*"
+	}
+	from("./JavaCommons-module/build/classes/java/main") {
 		include "**/*"
 	}
 }
