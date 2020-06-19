@@ -52,25 +52,25 @@ targetCompatibility = 1.8
 // JavaCommons core compilation
 task buildJavaCommonsCore(type: GradleBuild) {
 	buildFile = './JavaCommons-core/build.gradle'
-	tasks = ['test','jar','fatJar']
+	tasks = ['jar','fatJar']
 }
 
 // JavaCommons core compilation
 task buildJavaCommonsDStack(type: GradleBuild) {
 	buildFile = './JavaCommons-dstack/build.gradle'
-	tasks = ['test','jar','fatJar']
+	tasks = ['jar','fatJar']
 }
 
 // JavaCommons core compilation
 task buildJavaCommonsServlet(type: GradleBuild) {
 	buildFile = './JavaCommons-servlet/build.gradle'
-	tasks = ['test','jar','fatJar']
+	tasks = ['jar','fatJar']
 }
 
 // JavaCommons core compilation
 task buildJavaCommonsModule(type: GradleBuild) {
 	buildFile = './JavaCommons-module/build.gradle'
-	tasks = ['test','jar','fatJar']
+	tasks = ['jar','fatJar']
 }
 
 // Dependency linkage of core project build
