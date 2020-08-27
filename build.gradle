@@ -55,21 +55,27 @@ task buildJavaCommonsCore(type: GradleBuild) {
 	tasks = ['jar','fatJar']
 }
 
-// JavaCommons core compilation
+// JavaCommons dstack compilation
 task buildJavaCommonsDStack(type: GradleBuild) {
 	buildFile = './JavaCommons-dstack/build.gradle'
 	tasks = ['jar','fatJar']
 }
 
-// JavaCommons core compilation
+// JavaCommons servlet compilation
 task buildJavaCommonsServlet(type: GradleBuild) {
 	buildFile = './JavaCommons-servlet/build.gradle'
 	tasks = ['jar','fatJar']
 }
 
-// JavaCommons core compilation
+// JavaCommons module compilation
 task buildJavaCommonsModule(type: GradleBuild) {
 	buildFile = './JavaCommons-module/build.gradle'
+	tasks = ['jar','fatJar']
+}
+
+// JavaCommons pdf compilation
+task buildJavaCommonsPdf(type: GradleBuild) {
+	buildFile = './JavaCommons-pdf/build.gradle'
 	tasks = ['jar','fatJar']
 }
 
