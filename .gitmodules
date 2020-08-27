@@ -10,3 +10,6 @@
 [submodule "JavaCommons-module"]
 	path = JavaCommons-module
 	url = https://github.com/picoded/JavaCommons-module.git
+[submodule "JavaCommons-pdf"]
+	path = JavaCommons-pdf
+	url = https://github.com/picoded/JavaCommons-pdf.git
