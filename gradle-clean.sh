@@ -20,10 +20,12 @@ SUBMODULE_LIST=(
     "JavaCommons-servlet/JavaCommons-dstack"
 )
 
-# Reset in every submodule, including the submodules of submodules
+# Perform a clean in every submodule, including the submodules of submodules
 for MOD_DIR in ${SUBMODULE_LIST[@]}; do
     cd "$GRADLE_DIR/$MOD_DIR"
-    git reset --hard
-    git checkout master
-    git pull
+    ./gradlew clean
 done
+
+# Perform the clean on the parent project
+cd "$GRADLE_DIR"
+./gradlew clean
