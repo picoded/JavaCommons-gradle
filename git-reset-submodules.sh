@@ -14,6 +14,10 @@ SUBMODULE_LIST=(
     "JavaCommons-module"
     "JavaCommons-pdf"
     "JavaCommons-servlet"
+    "JavaCommons-dstack/JavaCommons-core"
+    "JavaCommons-pdf/JavaCommons-core"
+    "JavaCommons-servlet/JavaCommons-core"
+    "JavaCommons-servlet/JavaCommons-dstack"
 )
 
 # Setup for core
