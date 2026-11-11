@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.1.16] - 2026-11-11
+
+### Changed
+- Updated `JavaCommons-module` submodule to `v4.1.16` adding priority-tiered multi-cluster task execution and execution duration timeout caps.
+
 ## [4.1.15] - 2026-11-11
 
 ### Changed
