@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.1.16] - 2026-11-16
+
+### Changed
+- Updated `JavaCommons-dstack` submodule to `v4.1.16` adding native bulk removal (`removeBulk`) support with a 500-item hard limit across SQL, MongoDB, and memory backends.
+
 ## [4.1.15] - 2026-11-11
 
 ### Changed
