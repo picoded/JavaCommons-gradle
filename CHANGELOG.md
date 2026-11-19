@@ -10,4 +10,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [4.1.14] - 2026-10-21
 
 ### Changed
-- Updated `JavaCommons-module` submodule to `v4.1.12` with optimized `AccountTableCore.queryCount` performance.
+- Updated `JavaCommons-module` submodule to `v4.1.14` with optimized `AccountTableCore.queryCount` performance.
