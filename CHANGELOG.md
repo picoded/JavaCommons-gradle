@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.1.17] - 2026-11-17
+
+### Changed
+- Updated `JavaCommons-dstack` submodule to `v4.1.17` adding multi-value IN querying (`queryIn` and `queryIn_id`) with a 100-item maximum limit across SQL, Postgres JSONB, MongoDB, and memory backends.
+
 ## [4.1.16] - 2026-11-16
 
 ### Changed
